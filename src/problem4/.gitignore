@@ -1,0 +1,55 @@
+# Ignore Python cache and environment files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment
+env/
+venv/
+ENV/
+
+# Ignore logs and local databases
+*.log
+*.sqlite3
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore Jupyter checkpoint files
+.ipynb_checkpoints/
+
+# Ignore IDE/project files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+*.egg/
+.eggs/
+pip-wheel-metadata/
+
+# Coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.pytest_cache/
+
+# Custom
+local_settings.py
+.env
+.env.*
+# End Generation Here
+```
