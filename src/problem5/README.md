@@ -10,6 +10,22 @@ A minimal Express + TypeScript API that persists users in MySQL via TypeORM.
 
 ## Quick Start
 
+### Environment Variables
+
+This project uses a `.env` file (see `.gitignore`) to manage environment variables for local development. In production, set environment variables via your deployment platform.
+
+**Example `.env` file:**
+```
+PORT=3000
+NODE_ENV=dev
+```
+
+- `PORT`: Port for the Express server (default: `3000`).
+- `NODE_ENV`: `dev` for local/development environment, `prod` for production environment
+
+**Note:** The app will fall back to default values if a variable is omitted.
+
+
 1. **Install dependencies**
    ```bash
    npm install
@@ -45,17 +61,6 @@ A minimal Express + TypeScript API that persists users in MySQL via TypeORM.
 | `npm run build` | Compile TypeScript sources into `dist`. |
 | `npm start` | Run the compiled server (`node dist/index.js`). |
 | `npm run migration:run` | Execute pending TypeORM migrations using `src/configs/data-source.ts`. |
-| `npm test` | Run Jest tests (validation helpers + user routes via SuperTest mocks). |
-
-## Testing
-
-Unit tests are powered by Jest + ts-jest. Current coverage includes:
-- `src/validations/user.validation.ts`
-- `src/routes/user.route.ts` (via SuperTest with mocked repositories)
-
-```bash
-npm test
-```
 
 ## Database & Configuration
 
